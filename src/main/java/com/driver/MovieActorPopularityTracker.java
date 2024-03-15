@@ -14,7 +14,7 @@ public class MovieActorPopularityTracker {
 
             switch (choice) {
                 case 1:
-                    enqueueActor(scanner, actorDeque);
+                    enqueueActor(scanner, actorQueue);
                     break;
                 case 2:
                     dequeueActor(actorDeque);
@@ -46,7 +46,7 @@ public class MovieActorPopularityTracker {
         System.out.println("5. Exit");
     }
 
-    public static void enqueueActor(Scanner scanner, Queue<Actor> queue ) {
+    public static void enqueueActor(Scanner scanner, Queue<Actor> queue) {
     	//your code goes here
         System.out.println("Enter actor name: ");
         String name = scanner.next();
