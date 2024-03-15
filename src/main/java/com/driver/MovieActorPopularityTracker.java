@@ -5,7 +5,7 @@ import java.util.*;
 public class MovieActorPopularityTracker {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
-        //Queue<Actor> actorQueue = new LinkedList<>();
+        Queue<Actor> actorQueue = new LinkedList<>();
         Deque<Actor> actorDeque = new ArrayDeque<>();
 
         while (true) {
