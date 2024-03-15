@@ -46,11 +46,11 @@ public class MovieActorPopularityTracker {
         System.out.println("5. Exit");
     }
 
-    public static void enqueueActor(Scanner scanner, Deque<Actor> deque ) {
+    public static void enqueueActor(Scanner scanner, Queue<Actor> queue ) {
     	//your code goes here
         System.out.println("Enter actor name: ");
         String name = scanner.next();
-        deque.offer(new Actor(name, 0));
+        queue.offer(new Actor(name, 0));
         System.out.println(name + " added to the queue.");
     }
 
