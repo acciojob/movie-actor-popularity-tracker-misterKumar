@@ -3,10 +3,11 @@ package com.driver;
 import java.util.*;
 
 public class MovieActorPopularityTracker {
+    private static Deque<Actor> actorDeque = new ArrayDeque<>();
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
         Queue<Actor> actorQueue = new LinkedList<>();
-        Deque<Actor> actorDeque = new ArrayDeque<>();
+
 
         while (true) {
             printMenu();
@@ -14,7 +15,7 @@ public class MovieActorPopularityTracker {
 
             switch (choice) {
                 case 1:
-                    enqueueActor(scanner, actorQueue,actorDeque);
+                    enqueueActor(scanner, actorQueue);
                     break;
                 case 2:
                     dequeueActor(actorDeque);
@@ -46,12 +47,12 @@ public class MovieActorPopularityTracker {
         System.out.println("5. Exit");
     }
 
-    public static void enqueueActor(Scanner scanner, Queue<Actor> queue, Deque<Actor> deque) {
+    public static void enqueueActor(Scanner scanner, Queue<Actor> queue) {
     	//your code goes here
         System.out.println("Enter actor name: ");
         String name = scanner.next();
         queue.offer(new Actor(name, 0));
-        deque.offer(new Actor(name, 0));
+        actorDeque.offer(new Actor(name, 0));
         System.out.println(name + " added to the queue.");
     }
 
