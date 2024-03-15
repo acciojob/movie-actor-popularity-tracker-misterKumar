@@ -5,7 +5,7 @@ import java.util.*;
 public class MovieActorPopularityTracker {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
-        Queue<Actor> actorQueue = new LinkedList<>();
+        //Queue<Actor> actorQueue = new LinkedList<>();
         Deque<Actor> actorDeque = new ArrayDeque<>();
 
         while (true) {
@@ -14,7 +14,7 @@ public class MovieActorPopularityTracker {
 
             switch (choice) {
                 case 1:
-                    enqueueActor(scanner, actorQueue);
+                    enqueueActor(scanner, actorDeque);
                     break;
                 case 2:
                     dequeueActor(actorDeque);
@@ -46,11 +46,11 @@ public class MovieActorPopularityTracker {
         System.out.println("5. Exit");
     }
 
-    public static void enqueueActor(Scanner scanner, Queue<Actor> queue) {
+    public static void enqueueActor(Scanner scanner, Deque<Actor> deque ) {
     	//your code goes here
         System.out.println("Enter actor name: ");
         String name = scanner.next();
-        queue.offer(new Actor(name, 0));
+        deque.offer(new Actor(name, 0));
         System.out.println(name + " added to the queue.");
     }
 
